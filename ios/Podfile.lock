@@ -1,0 +1,81 @@
+PODS:
+  - Alamofire (4.8.2)
+  - AlamofireImage (3.5.2):
+    - Alamofire (~> 4.8)
+  - FisherExtensions (0.0.1):
+    - Kingfisher (~> 5.0)
+  - Kingfisher (5.7.1)
+  - MVICocoa (0.0.1):
+    - Alamofire
+    - AlamofireImage
+    - RxCocoa
+    - RxSwift
+    - Swinject
+  - Persist (0.0.1):
+    - RxSwift (~> 5.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - Swinject (2.6.2)
+  - SwinjectStoryboard (2.2.0):
+    - Swinject (~> 2.6)
+
+DEPENDENCIES:
+  - FisherExtensions (from `https://github.com/droideveloper/KingfisherExtensions.git`, branch `master`)
+  - Kingfisher (~> 5.0)
+  - MVICocoa (from `https://github.com/droideveloper/MVICocoa.git`, branch `master`)
+  - Persist (from `https://github.com/droideveloper/Persist.git`, branch `master`)
+  - SwinjectStoryboard
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - Kingfisher
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - Swinject
+    - SwinjectStoryboard
+
+EXTERNAL SOURCES:
+  FisherExtensions:
+    :branch: master
+    :git: https://github.com/droideveloper/KingfisherExtensions.git
+  MVICocoa:
+    :branch: master
+    :git: https://github.com/droideveloper/MVICocoa.git
+  Persist:
+    :branch: master
+    :git: https://github.com/droideveloper/Persist.git
+
+CHECKOUT OPTIONS:
+  FisherExtensions:
+    :commit: 3c9f96441419fc2fb07e4aa26e60e6ddd8b38fd8
+    :git: https://github.com/droideveloper/KingfisherExtensions.git
+  MVICocoa:
+    :commit: 12eaa790a57cae3490aac8397989f779c54471cc
+    :git: https://github.com/droideveloper/MVICocoa.git
+  Persist:
+    :commit: dd38009b708457418a06a1448ff154e00ab78314
+    :git: https://github.com/droideveloper/Persist.git
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  FisherExtensions: 70233263ee33d10c6bc9a9ee5a50171765086d99
+  Kingfisher: 176d377ad339113c99ad4980cbae687f807e20fe
+  MVICocoa: f4e85b2cea784114a65b04691be6ec6a8f0e80c7
+  Persist: a4953b9c4e82d27d7afe3f3a4bec8f291ca08a08
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
+  SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
+
+PODFILE CHECKSUM: c4a83cdec2f1032a6f5f91e23ee68c4ae49cfde7
+
+COCOAPODS: 1.7.1

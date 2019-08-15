@@ -1,0 +1,26 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Currency' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Currency
+
+    pod 'MVICocoa', :git => "https://github.com/droideveloper/MVICocoa.git", :branch => "master"
+  pod 'Persist', :git => "https://github.com/droideveloper/Persist.git", :branch => "master"	
+  pod 'FisherExtensions', :git => "https://github.com/droideveloper/KingfisherExtensions.git", :branch => "master"
+  pod 'SwinjectStoryboard'
+  pod 'Kingfisher', '~> 5.0'
+
+  target 'CurrencyTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'CurrencyUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
