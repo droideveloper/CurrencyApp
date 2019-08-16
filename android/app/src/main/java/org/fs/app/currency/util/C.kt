@@ -27,10 +27,18 @@ sealed class C {
     const val CACHE_SIZE = 24 * 1024 * 1024L
     const val DEFAULT_TIMEOUT = 20L
 
-    // endpoint methods
-    const val GET_LATEST = "latest"
+    // currency endpoint methods
+    const val GET_LATEST = "/latest"
 
     // moshi
     const val DATE_FORMAT_STR = "yyyy-MM-dd"
+
+    // currency codes
+    const val EUROPE_CURRENCY = "EUR"
+    const val EUROPE_COUNTRY  = "EU" // All Europe considered as one country
+
+    // flag url components
+    const val PATH_FLAG_TYPE = "flat"
+    const val PATH_FLAG_SIZE = "64.png"
   }
 }

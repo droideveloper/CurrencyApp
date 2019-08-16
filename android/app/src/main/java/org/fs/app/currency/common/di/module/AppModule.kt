@@ -20,9 +20,18 @@ import android.app.Application
 import android.content.Context
 import dagger.Binds
 import dagger.Module
+import dagger.android.ContributesAndroidInjector
 import org.fs.app.currency.App
-import org.fs.app.currency.common.repo.RateRepository
-import org.fs.app.currency.common.repo.RateRepositoryImp
+import org.fs.app.currency.common.manager.*
+import org.fs.app.currency.common.repo.CountryCurrenciesRepository
+import org.fs.app.currency.common.repo.CountryCurrenciesRepositoryImp
+import org.fs.app.currency.common.repo.RatesRepository
+import org.fs.app.currency.common.repo.RatesRepositoryImp
+import org.fs.app.currency.net.EndpointProxy
+import org.fs.app.currency.net.EndpointProxyImp
+import org.fs.app.currency.view.LandingPageActivity
+import org.fs.app.currency.view.RateActivity
+import org.fs.architecture.mvi.common.ForActivity
 import javax.inject.Singleton
 
 @Module
@@ -31,5 +40,18 @@ abstract class AppModule {
   @Singleton @Binds abstract fun bindApplication(app: App): Application
   @Singleton @Binds abstract fun bincApplicationContext(app: Application): Context
 
-  @Singleton @Binds abstract fun bindRateRepository(repo: RateRepositoryImp): RateRepository
+  @Singleton @Binds abstract fun bindRatesRepository(repo: RatesRepositoryImp): RatesRepository
+  @Singleton @Binds abstract fun bindCountryCurrenciesRepository(repo: CountryCurrenciesRepositoryImp): CountryCurrenciesRepository
+
+  @Singleton @Binds abstract fun bindRateManager(manager: RateManagerImp): RateManager
+  @Singleton @Binds abstract fun bindCurrencyToCountryManager(manager: CurrencyToCountryManagerImp): CurrencyToCountryManager
+  @Singleton @Binds abstract fun bindCurrencyToFlagUrlManager(manager: CurrencyToFlagUrlManagerImp): CurrencyToFlagUrlManager
+
+  @Singleton @Binds abstract fun bindEndpointProxy(proxy: EndpointProxyImp): EndpointProxy
+
+  @ForActivity @ContributesAndroidInjector(modules = [ActivityModule::class, ProviderActivityModule::class])
+  abstract fun contributeLandingPageActivity(): LandingPageActivity
+
+  @ForActivity @ContributesAndroidInjector(modules = [ActivityModule::class, ProviderActivityModule::class])
+  abstract fun contributeRateActivity(): RateActivity
 }

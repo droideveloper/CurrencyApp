@@ -14,17 +14,16 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.di.module
+package org.fs.app.currency.common.repo
 
-import dagger.Module
-import dagger.Provides
-import org.fs.rx.extensions.common.Variable
-import java.util.*
+import io.reactivex.Observable
+import org.fs.app.currency.net.EndpointProxy
+import org.fs.app.currency.net.model.Resource
+import javax.inject.Inject
 import javax.inject.Singleton
 
-@Module
-class ProviderAppModule {
+@Singleton
+class RatesRepositoryImp @Inject constructor(private val proxy: EndpointProxy): RatesRepository {
 
-  @Singleton @Provides fun provideRate(): Variable<Map<String, Double>> = Variable(Collections.emptyMap())
-
+  override fun rates(base: String): Observable<Resource<Map<String, Double>>> = proxy.rates(base)
 }

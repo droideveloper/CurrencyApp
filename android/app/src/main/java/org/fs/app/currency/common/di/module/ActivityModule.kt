@@ -14,11 +14,20 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.common.di.module
 
-interface CurrencyToCountryManager {
+import dagger.Binds
+import dagger.Module
+import org.fs.app.currency.view.LandingPageActivity
+import org.fs.app.currency.view.LandingPageActivityView
+import org.fs.app.currency.view.RateActivity
+import org.fs.app.currency.view.RateActivityView
+import org.fs.architecture.mvi.common.ForActivity
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
+@Module
+abstract class ActivityModule {
+
+  @ForActivity @Binds abstract fun bindLandingPageActivityView(activity: LandingPageActivity): LandingPageActivityView
+
+  @ForActivity @Binds abstract fun bindRateActivityView(activity: RateActivity): RateActivityView
 }

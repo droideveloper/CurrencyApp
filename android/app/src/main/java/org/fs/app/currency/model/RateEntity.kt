@@ -14,11 +14,23 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.model
 
-interface CurrencyToCountryManager {
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+import org.fs.architecture.mvi.util.EMPTY
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
+@Parcelize
+class RateEntity: Parcelable {
+
+  var base: String = String.EMPTY
+  var amount: Double = 0.0
+
+  override fun toString(): String {
+    return "base: $base amount: $amount"
+  }
+
+  companion object {
+    val EMPTY = RateEntity()
+  }
 }

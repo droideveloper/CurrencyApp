@@ -14,11 +14,20 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.common.glide
 
-interface CurrencyToCountryManager {
+import com.bumptech.glide.annotation.GlideExtension
+import com.bumptech.glide.annotation.GlideOption
+import com.bumptech.glide.request.BaseRequestOptions
+import org.fs.app.currency.R
+import org.fs.app.currency.util.applyBase
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
+@GlideExtension sealed class CurrencyAppGlideExtension {
+
+  companion object {
+
+    @JvmStatic @GlideOption fun applyCircularCrop(options: BaseRequestOptions<*>): BaseRequestOptions<*> {
+      return options.applyBase(R.drawable.ic_place_holder_oval, R.drawable.ic_error_place_holder_oval)
+    }
+  }
 }

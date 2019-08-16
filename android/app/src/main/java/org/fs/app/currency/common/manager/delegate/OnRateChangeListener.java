@@ -1,6 +1,6 @@
 /*
  *  Copyright (C) 2019 Fatih, Currency Android Kotlin.
- *  
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -13,17 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.fs.app.currency.common.manager.delegate;
 
-package org.fs.app.currency.common.repo
+import io.reactivex.annotations.NonNull;
+import org.fs.app.currency.model.RateEntity;
 
-import com.bumptech.glide.load.engine.Resource
-import io.reactivex.Observable
-import org.fs.app.currency.net.EndpointProxy
-import javax.inject.Inject
-import javax.inject.Singleton
-
-@Singleton
-class RateRepositoryImp @Inject constructor(private val proxy: EndpointProxy): RateRepository {
-
-  override fun rates(base: String?): Observable<Resource<Map<String, Double>>> = proxy.rates(base)
+public interface OnRateChangeListener {
+  void onRateChange(@NonNull RateEntity newValue);
 }

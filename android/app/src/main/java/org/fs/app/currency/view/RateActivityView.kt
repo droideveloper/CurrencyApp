@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.view
 
-interface CurrencyToCountryManager {
+import org.fs.app.currency.model.RateModel
+import org.fs.architecture.mvi.common.View
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
+interface RateActivityView: View {
+  fun render(model: RateModel)
 }

@@ -17,6 +17,7 @@
 package org.fs.app.currency.common.di.module
 
 import android.content.Context
+import android.util.Log
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
@@ -24,12 +25,14 @@ import okhttp3.Cache
 import okhttp3.HttpUrl
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import org.fs.app.currency.BuildConfig
 import org.fs.app.currency.common.moshi.DateAdapter
 import org.fs.app.currency.net.Endpoint
 import org.fs.app.currency.util.C.Companion.CACHE_DIR
 import org.fs.app.currency.util.C.Companion.CACHE_SIZE
 import org.fs.app.currency.util.C.Companion.DEFAULT_TIMEOUT
+import org.fs.app.currency.util.log
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -58,6 +61,10 @@ class NetworkModule {
     }
 
     return builder.build()
+  }
+
+  @Singleton @Provides fun provideLogInterceptor(): Interceptor = HttpLoggingInterceptor { msg -> log(Log.INFO, msg) }.apply {
+    level = HttpLoggingInterceptor.Level.BODY
   }
 
   @Singleton @Provides fun provideMoshi(): Moshi = Moshi.Builder()

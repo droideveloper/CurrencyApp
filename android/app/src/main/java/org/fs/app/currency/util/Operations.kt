@@ -14,11 +14,12 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.util
 
-interface CurrencyToCountryManager {
+sealed class Operations {
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
+  companion object {
+
+    const val REFRESH = 0x01
+  }
 }

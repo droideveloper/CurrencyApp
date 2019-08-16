@@ -16,9 +16,9 @@
 
 package org.fs.app.currency.common.manager
 
-interface CurrencyToCountryManager {
+import android.net.Uri
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
+interface CurrencyToFlagUrlManager {
+
+  fun countryFlagUrlFor(currencyCode: String): Uri
 }

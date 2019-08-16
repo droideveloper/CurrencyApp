@@ -36,6 +36,10 @@ android {
       resValue "string", "app_name", "Currency Debug"
 
       buildConfigField "String", "BASE_URL", "\"https://revolut.duckdns.org/\""
+      buildConfigField "String", "COUNTRY_CURRENCY_URL", "\"http://country.io/currency.json\""
+
+      buildConfigField "String", "BASE_FLAG_SCHEME", "\"https\""
+      buildConfigField "String", "BASE_FLAG_AUTHORITY", "\"www.countryflags.io\""
 
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -46,7 +50,11 @@ android {
 
       resValue "string", "app_name", "Currency Staging"
 
-      buildConfigField "String", "BASE_URL", "\"https://revolut.duckdns.org/\""
+      buildConfigField "String", "BASE_URL", "\"https://revolut.duckdns.org\""
+      buildConfigField "String", "COUNTRY_CURRENCY_URL", "\"http://country.io/currency.json\""
+
+      buildConfigField "String", "BASE_FLAG_SCHEME", "\"https\""
+      buildConfigField "String", "BASE_FLAG_AUTHORITY", "\"www.countryflags.io\""
 
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -56,6 +64,10 @@ android {
       resValue "string", "app_name", "Currency"
 
       buildConfigField "String", "BASE_URL", "\"https://revolut.duckdns.org/\""
+      buildConfigField "String", "COUNTRY_CURRENCY_URL", "\"http://country.io/currency.json\""
+
+      buildConfigField "String", "BASE_FLAG_SCHEME", "\"https\""
+      buildConfigField "String", "BASE_FLAG_AUTHORITY", "\"www.countryflags.io\""
 
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'

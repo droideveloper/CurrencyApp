@@ -14,11 +14,12 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.common.repo
 
-interface CurrencyToCountryManager {
+import io.reactivex.Observable
+import org.fs.app.currency.net.model.Resource
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
+interface RatesRepository {
+
+  fun rates(base: String): Observable<Resource<Map<String, Double>>>
 }
