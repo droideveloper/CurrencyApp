@@ -14,11 +14,9 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.model
 
-interface CurrencyToCountryManager {
+import org.fs.architecture.mvi.common.Model
+import org.fs.architecture.mvi.common.SyncState
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
-}
+data class RateModel(override val state: SyncState, override val data: Map<String, Double>): Model<Map<String, Double>>(state, data)

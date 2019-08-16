@@ -14,12 +14,8 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.repo
+package org.fs.app.currency.model.event
 
-import com.bumptech.glide.load.engine.Resource
-import io.reactivex.Observable
+import org.fs.architecture.mvi.common.Event
 
-interface RateRepository {
-
-  fun rates(base: String? = null): Observable<Resource<Map<String, Double>>>
-}
+object RateChangeEvent: Event

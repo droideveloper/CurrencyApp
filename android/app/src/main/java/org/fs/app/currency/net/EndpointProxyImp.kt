@@ -27,16 +27,29 @@ import javax.inject.Singleton
 @Singleton
 class EndpointProxyImp @Inject constructor(private val endpoint: Endpoint): EndpointProxy {
 
-  override fun rates(base: String?): Observable<Resource<Map<String, Double>>> = endpoint.rates(base).toResource()
+  override fun rates(base: String): Observable<Resource<Map<String, Double>>> =
+    endpoint.rates(base).toRatesResource()
 
-  private fun Observable<Response<RateResponse>>.toResource(): Observable<Resource<Map<String, Double>>>  = map { response ->
+  override fun countryCurrencies(url: String): Observable<Resource<Map<String, String>>> =
+    endpoint.countryCurrencies(url).toResource()
+
+
+  private fun Observable<Response<RateResponse>>.toRatesResource(): Observable<Resource<Map<String, Double>>> = map { response ->
     if (response.isSuccessful) {
       val body = response.body() ?: throw IllegalArgumentException("http error ${response.code()}")
       if (body.error != null) {
         return@map Resource.Failure<Map<String, Double>>(body.error)
       }
-      return@map Resource.Success(body.base, body.date, body.data)
+      return@map Resource.Success(body.base, body.date, body.rates)
     }
     throw IllegalArgumentException("http error ${response.code()}")
+  }
+
+  private fun <T> Observable<Response<T>>.toResource(): Observable<Resource<T>> = map { response ->
+    if (response.isSuccessful) {
+      val body = response.body() ?: throw IllegalArgumentException("http error ${response.code()}")
+      return@map Resource.Success<T>(null, null, body)
+    }
+    return@map Resource.Failure<T>("http error ${response.code()}")
   }
 }

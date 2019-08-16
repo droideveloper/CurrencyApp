@@ -14,11 +14,10 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.model.event
 
-import android.net.Uri
+import org.fs.app.currency.util.C.Companion.EUROPE_CURRENCY
+import org.fs.architecture.mvi.common.Event
 
-interface CountryToFlagUrlManager {
-
-  fun countryFlagUrlFor(countryCode: String): Uri
-}
+// this is base of defaults
+data class LoadRatesEvent(val base: String = EUROPE_CURRENCY): Event

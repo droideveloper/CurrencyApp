@@ -1,6 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
 /*
  *  Copyright (C) 2019 Fatih, Currency Android Kotlin.
- *  
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -13,12 +15,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-package org.fs.app.currency.common.manager
-
-interface CurrencyToCountryManager {
-
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
-}
+ -->
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:gravity="fill_horizontal">
+    <shape android:shape="rectangle">
+      <solid android:color="@android:color/transparent" />
+      <size android:height="@dimen/dp16" />
+    </shape>
+  </item>
+</layer-list>

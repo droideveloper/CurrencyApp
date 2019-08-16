@@ -14,11 +14,16 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.common.repo
 
-interface CurrencyToCountryManager {
+import io.reactivex.Observable
+import org.fs.app.currency.net.EndpointProxy
+import org.fs.app.currency.net.model.Resource
+import javax.inject.Inject
+import javax.inject.Singleton
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
+@Singleton
+class CountryCurrenciesRepositoryImp @Inject constructor(private val proxy: EndpointProxy): CountryCurrenciesRepository{
+
+  override fun countryCurrencies(): Observable<Resource<Map<String, String>>> = proxy.countryCurrencies()
 }

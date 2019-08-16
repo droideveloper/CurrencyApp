@@ -14,11 +14,16 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.common.di.module
 
-interface CurrencyToCountryManager {
+import dagger.Module
+import dagger.Provides
+import org.fs.app.currency.model.RateEntity
+import org.fs.architecture.mvi.common.ForActivity
+import org.fs.architecture.mvi.util.ObservableList
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
+@Module
+class ProviderActivityModule {
+
+  @ForActivity @Provides fun provideRateDataSet(): ObservableList<RateEntity> = ObservableList()
 }

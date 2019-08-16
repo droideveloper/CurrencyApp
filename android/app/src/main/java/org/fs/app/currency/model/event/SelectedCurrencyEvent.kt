@@ -14,11 +14,9 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.model.event
 
-interface CurrencyToCountryManager {
+import org.fs.app.currency.model.RateEntity
+import org.fs.architecture.mvi.common.Event
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
-}
+data class SelectedCurrencyEvent(val rate: RateEntity): Event
