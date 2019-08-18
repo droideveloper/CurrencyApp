@@ -14,12 +14,18 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.common.di.module
 
-interface CurrencyToCountryManager {
+import dagger.Module
+import dagger.Provides
+import org.fs.app.currency.mock.LandingPageActivity
+import org.fs.app.currency.mock.RateActivity
+import javax.inject.Singleton
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
-  fun clearAll()
+@Module
+class DaggerProviderViewModule {
+
+  @Singleton @Provides fun provideLandingPageActivity(): LandingPageActivity = LandingPageActivity()
+
+  @Singleton @Provides fun provideRateActivity(): RateActivity = RateActivity()
 }

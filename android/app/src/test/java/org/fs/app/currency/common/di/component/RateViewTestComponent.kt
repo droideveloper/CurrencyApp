@@ -14,12 +14,15 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.common.di.component
 
-interface CurrencyToCountryManager {
+import dagger.Subcomponent
+import dagger.android.AndroidInjector
+import org.fs.app.currency.test.RateViewTest
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
-  fun clearAll()
+@Subcomponent
+interface RateViewTestComponent: AndroidInjector<RateViewTest> {
+
+  @Subcomponent.Builder
+  abstract class Builder: AndroidInjector.Builder<RateViewTest>()
 }

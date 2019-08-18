@@ -17,9 +17,10 @@
 package org.fs.app.currency.common.repo
 
 import io.reactivex.Observable
+import org.fs.app.currency.BuildConfig
 import org.fs.app.currency.net.model.Resource
 
 interface CountryCurrenciesRepository {
 
-  fun countryCurrencies(): Observable<Resource<Map<String, String>>>
+  fun countryCurrencies(url: String = BuildConfig.COUNTRY_CURRENCY_URL): Observable<Resource<Map<String, String>>>
 }

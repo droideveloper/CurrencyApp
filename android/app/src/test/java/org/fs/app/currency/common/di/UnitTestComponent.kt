@@ -14,12 +14,24 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.common.di
 
-interface CurrencyToCountryManager {
+import dagger.Component
+import dagger.android.AndroidInjector
+import org.fs.app.currency.common.UnitTest
+import org.fs.app.currency.common.di.module.*
+import javax.inject.Singleton
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
-  fun clearAll()
+@Singleton
+@Component(modules = [
+  DaggerTestModule::class,
+  DaggerTestCaseModule::class,
+  DaggerViewModule::class,
+  DaggerProviderViewModule::class,
+  TestAppModule::class,
+  TestNetworkModule::class])
+interface UnitTestComponent: AndroidInjector<UnitTest> {
+
+  @Component.Builder
+  abstract class Builder: AndroidInjector.Builder<UnitTest>()
 }

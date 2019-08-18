@@ -16,8 +16,6 @@
 
 package org.fs.app.currency.common.manager
 
-import android.net.Uri
-import android.text.TextUtils
 import org.fs.app.currency.BuildConfig.BASE_FLAG_AUTHORITY
 import org.fs.app.currency.BuildConfig.BASE_FLAG_SCHEME
 import org.fs.app.currency.util.C.Companion.PATH_FLAG_SIZE
@@ -29,17 +27,17 @@ import javax.inject.Singleton
 @Singleton
 class CurrencyToFlagUrlManagerImp @Inject constructor(private val currencyToCountryManager: CurrencyToCountryManager): CurrencyToFlagUrlManager {
 
-  override fun countryFlagUrlFor(currencyCode: String): Uri {
-    val countryCode = currencyToCountryManager.countryCodeForCurrency(currencyCode);
-    if (!TextUtils.equals(countryCode, String.EMPTY)) {
-      return Uri.Builder()
-        .scheme(BASE_FLAG_SCHEME)
-        .authority(BASE_FLAG_AUTHORITY)
-        .appendPath(countryCode)
-        .appendPath(PATH_FLAG_TYPE)
-        .appendPath(PATH_FLAG_SIZE)
-        .build()
+  override fun countryFlagUrlFor(currencyCode: String): String {
+    val countryCode = currencyToCountryManager.countryCodeForCurrency(currencyCode)
+    if (countryCode != String.EMPTY) {
+      val buffer = StringBuffer()
+      buffer.append("$BASE_FLAG_SCHEME://")
+      buffer.append(BASE_FLAG_AUTHORITY)
+      buffer.append("/$countryCode")
+      buffer.append("/$PATH_FLAG_TYPE")
+      buffer.append("/$PATH_FLAG_SIZE")
+      return buffer.toString()
     }
-    return Uri.EMPTY
+    return String.EMPTY
   }
 }

@@ -14,8 +14,15 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.model.event
+package org.fs.app.currency.common.di.component
 
-import org.fs.architecture.mvi.common.Event
+import dagger.Subcomponent
+import dagger.android.AndroidInjector
+import org.fs.app.currency.test.CountryToFlagUrlManagerTest
 
-object RatesChangeEvent: Event
+@Subcomponent
+interface CountryToFlagUrlManagerTestComponent: AndroidInjector<CountryToFlagUrlManagerTest> {
+
+  @Subcomponent.Builder
+  abstract class Builder: AndroidInjector.Builder<CountryToFlagUrlManagerTest>()
+}

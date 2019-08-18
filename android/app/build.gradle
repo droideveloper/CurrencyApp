@@ -17,6 +17,10 @@ android {
       useSupportLibrary true
     }
 
+    testOptions {
+      unitTests.returnDefaultValues = true
+    }
+
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
 
@@ -109,7 +113,15 @@ dependencies {
   }
   kapt "com.github.bumptech.glide:compiler:$GLIDE_VERSION"
 
+
+
   testImplementation 'junit:junit:4.12'
+  testImplementation 'org.mockito:mockito-core:2.+'
+  testImplementation "org.fs.architecture:mvi:$MVI_VERSION"
+
+  kaptTest  "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+  kaptTest "com.google.dagger:dagger-android-processor:$DAGGER_VERSION"
+
   androidTestImplementation 'androidx.test:runner:1.2.0'
   androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
