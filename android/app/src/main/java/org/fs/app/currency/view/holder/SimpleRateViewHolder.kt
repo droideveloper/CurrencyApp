@@ -17,9 +17,6 @@
 package org.fs.app.currency.view.holder
 
 import android.content.Context
-import android.net.Uri
-import android.text.TextUtils
-import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
@@ -33,13 +30,12 @@ import org.fs.app.currency.common.manager.RateManager
 import org.fs.app.currency.common.manager.delegate.OnRateChangeListener
 import org.fs.app.currency.common.manager.delegate.OnRatesChangeListener
 import org.fs.app.currency.model.RateEntity
-import org.fs.app.currency.util.log
 import org.fs.app.currency.util.toCircleDrawableTarget
+import org.fs.architecture.mvi.util.EMPTY
 import org.fs.architecture.mvi.util.inflate
 import org.fs.architecture.mvi.util.plusAssign
 import org.fs.rx.extensions.util.clicks
 import org.fs.rx.extensions.util.textChanges
-import java.text.DecimalFormat
 import java.text.ParseException
 import java.util.*
 
@@ -79,7 +75,7 @@ class SimpleRateViewHolder(view: View,
     rateManager.addOnRateChangedListener(this)
 
     val uri = currencyToFlagUrlManager.countryFlagUrlFor(value.base)
-    if (uri != Uri.EMPTY) {
+    if (uri != String.EMPTY) {
       glide.clear(viewCountryFlagImage)
       glide.asBitmap()
         .load(uri)
@@ -123,7 +119,7 @@ class SimpleRateViewHolder(view: View,
     }
 
   private fun bindRateAmountChange(value: RateEntity): Observable<RateEntity> = viewAmountEditText.textChanges()
-    .filter { TextUtils.equals(value.base, rateManager.rate.base) }
+    .filter { value.base == rateManager.rate.base }
     .map { text ->
       // defaults will be null we can not parse it
       val amount = try {
@@ -141,7 +137,7 @@ class SimpleRateViewHolder(view: View,
 
   private fun requestFocusIfNeeded(newValue: RateEntity) {
     val shouldHaveFocus = adapterPosition == 0
-    if (TextUtils.equals(value.base, newValue.base) && shouldHaveFocus) {
+    if ((value.base == newValue.base) && shouldHaveFocus) {
       viewAmountEditText.requestFocus()
       inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_NOT_ALWAYS)
     }
@@ -152,7 +148,7 @@ class SimpleRateViewHolder(view: View,
     val amount = rateManager.amountForCurrency(value.base)
     val amountString = rateManager.format(amount)
     val currentRateBase = rateManager.rate.base
-    if (!TextUtils.equals(currentRateBase, value.base)) {
+    if (currentRateBase !=  value.base) {
       // hold reference to it
       value.amount = amount
       if (amount == 0.0) {

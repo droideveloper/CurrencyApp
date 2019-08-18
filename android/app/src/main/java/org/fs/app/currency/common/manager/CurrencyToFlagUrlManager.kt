@@ -16,9 +16,7 @@
 
 package org.fs.app.currency.common.manager
 
-import android.net.Uri
-
 interface CurrencyToFlagUrlManager {
 
-  fun countryFlagUrlFor(currencyCode: String): Uri
+  fun countryFlagUrlFor(currencyCode: String): String
 }

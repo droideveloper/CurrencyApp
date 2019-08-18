@@ -14,8 +14,13 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.model.event
+package org.fs.app.currency.common.dagger.key
 
-import org.fs.architecture.mvi.common.Event
+import dagger.MapKey
+import org.fs.architecture.mvi.common.View
+import kotlin.reflect.KClass
 
-object RateChangeEvent: Event
+@Target(AnnotationTarget.FUNCTION)
+@Retention(AnnotationRetention.RUNTIME)
+@MapKey
+annotation class ViewKey(val value: KClass<out View>)

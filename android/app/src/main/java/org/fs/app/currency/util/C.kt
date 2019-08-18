@@ -36,6 +36,8 @@ sealed class C {
     // currency codes
     const val EUROPE_CURRENCY = "EUR"
     const val EUROPE_COUNTRY  = "EU" // All Europe considered as one country
+    const val USA_CURRENCY = "USD" // there are other countries uses this so we only check in for The American Money
+    const val USA_COUNTRY = "US"
 
     // flag url components
     const val PATH_FLAG_TYPE = "flat"

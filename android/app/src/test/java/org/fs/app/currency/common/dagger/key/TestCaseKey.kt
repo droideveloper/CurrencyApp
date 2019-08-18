@@ -14,12 +14,13 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.common.dagger.key
 
-interface CurrencyToCountryManager {
+import dagger.MapKey
+import org.fs.app.currency.common.base.TestCase
+import kotlin.reflect.KClass
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
-  fun clearAll()
-}
+@Target(AnnotationTarget.FUNCTION)
+@Retention(AnnotationRetention.RUNTIME)
+@MapKey
+annotation class TestCaseKey(val value: KClass<out TestCase>)

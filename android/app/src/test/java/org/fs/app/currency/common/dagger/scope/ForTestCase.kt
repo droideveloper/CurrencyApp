@@ -14,12 +14,10 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.common.dagger.scope
 
-interface CurrencyToCountryManager {
+import javax.inject.Scope
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
-  fun clearAll()
-}
+@Retention(AnnotationRetention.RUNTIME)
+@Scope
+annotation class ForTestCase

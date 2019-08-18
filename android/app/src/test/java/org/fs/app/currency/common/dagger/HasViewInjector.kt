@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.common.manager
+package org.fs.app.currency.common.dagger
 
-interface CurrencyToCountryManager {
+import dagger.android.AndroidInjector
+import org.fs.architecture.mvi.common.View
 
-  val needsPopulateData: Boolean
-  fun countryCodeForCurrency(currencyCode: String): String
-  fun populateCache(map: Map<String, String>)
-  fun clearAll()
+interface HasViewInjector {
+
+  fun viewInjector(): AndroidInjector<View>
 }

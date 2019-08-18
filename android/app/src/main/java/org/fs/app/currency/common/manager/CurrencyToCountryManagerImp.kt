@@ -16,10 +16,11 @@
 
 package org.fs.app.currency.common.manager
 
-import android.text.TextUtils
 import androidx.collection.ArrayMap
 import org.fs.app.currency.util.C.Companion.EUROPE_COUNTRY
 import org.fs.app.currency.util.C.Companion.EUROPE_CURRENCY
+import org.fs.app.currency.util.C.Companion.USA_COUNTRY
+import org.fs.app.currency.util.C.Companion.USA_CURRENCY
 import org.fs.architecture.mvi.util.EMPTY
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -31,16 +32,16 @@ class CurrencyToCountryManagerImp @Inject constructor(): CurrencyToCountryManage
     private const val DEFAULT_SIZE = 1
   }
 
-  private val countryToCurrencyCache by lazy { ArrayMap<String, String>().apply {
-      put(EUROPE_COUNTRY, EUROPE_CURRENCY)
-    }
-  }
+  private val countryToCurrencyCache by lazy { ArrayMap<String, String>() }
 
   override val needsPopulateData: Boolean get() = countryToCurrencyCache.size <= DEFAULT_SIZE
 
   override fun countryCodeForCurrency(currencyCode: String): String {
     for (entry in countryToCurrencyCache) {
-      if (TextUtils.equals(entry.value, currencyCode)) {
+      if (USA_CURRENCY == currencyCode) {
+        return USA_COUNTRY
+      }
+      if (entry.value == currencyCode) {
         return entry.key
       }
     }
@@ -48,7 +49,10 @@ class CurrencyToCountryManagerImp @Inject constructor(): CurrencyToCountryManage
   }
 
   override fun populateCache(map: Map<String, String>) {
-    val filtered = map.filter { entry -> !TextUtils.equals(entry.value, EUROPE_CURRENCY) }
+    val filtered = map.filter { entry -> entry.value != EUROPE_CURRENCY }
     countryToCurrencyCache.putAll(filtered) // will what we need
+    countryToCurrencyCache[EUROPE_COUNTRY] = EUROPE_CURRENCY // append default
   }
+
+  override fun clearAll() = countryToCurrencyCache.clear()
 }

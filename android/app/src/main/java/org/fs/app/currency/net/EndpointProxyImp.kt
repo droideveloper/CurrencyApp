@@ -42,7 +42,7 @@ class EndpointProxyImp @Inject constructor(private val endpoint: Endpoint): Endp
       }
       return@map Resource.Success(body.base, body.date, body.rates)
     }
-    throw IllegalArgumentException("http error ${response.code()}")
+    return@map Resource.Failure<Map<String, Double>>("http error ${response.code()}")
   }
 
   private fun <T> Observable<Response<T>>.toResource(): Observable<Resource<T>> = map { response ->

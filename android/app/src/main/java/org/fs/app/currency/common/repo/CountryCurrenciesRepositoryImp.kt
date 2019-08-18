@@ -25,5 +25,5 @@ import javax.inject.Singleton
 @Singleton
 class CountryCurrenciesRepositoryImp @Inject constructor(private val proxy: EndpointProxy): CountryCurrenciesRepository{
 
-  override fun countryCurrencies(): Observable<Resource<Map<String, String>>> = proxy.countryCurrencies()
+  override fun countryCurrencies(url: String): Observable<Resource<Map<String, String>>> = proxy.countryCurrencies(url)
 }
