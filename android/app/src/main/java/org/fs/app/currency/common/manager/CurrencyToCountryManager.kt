@@ -18,5 +18,8 @@ package org.fs.app.currency.common.manager
 
 interface CurrencyToCountryManager {
 
+  val needsPopulateData: Boolean
   fun countryCodeForCurrency(currencyCode: String): String
+  fun populateCache(map: Map<String, String>)
+  fun clearAll()
 }

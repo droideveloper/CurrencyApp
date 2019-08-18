@@ -17,9 +17,12 @@
 package org.fs.app.currency.net
 
 import io.reactivex.Observable
+import org.fs.app.currency.BuildConfig
 import org.fs.app.currency.net.model.Resource
 
 interface EndpointProxy {
 
-  fun rates(base: String? = null): Observable<Resource<Map<String, Double>>>
+  fun rates(base: String): Observable<Resource<Map<String, Double>>>
+
+  fun countryCurrencies(url: String = BuildConfig.COUNTRY_CURRENCY_URL): Observable<Resource<Map<String, String>>>
 }

@@ -17,6 +17,10 @@ android {
       useSupportLibrary true
     }
 
+    testOptions {
+      unitTests.returnDefaultValues = true
+    }
+
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
 
@@ -36,6 +40,10 @@ android {
       resValue "string", "app_name", "Currency Debug"
 
       buildConfigField "String", "BASE_URL", "\"https://revolut.duckdns.org/\""
+      buildConfigField "String", "COUNTRY_CURRENCY_URL", "\"http://country.io/currency.json\""
+
+      buildConfigField "String", "BASE_FLAG_SCHEME", "\"https\""
+      buildConfigField "String", "BASE_FLAG_AUTHORITY", "\"www.countryflags.io\""
 
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -46,7 +54,11 @@ android {
 
       resValue "string", "app_name", "Currency Staging"
 
-      buildConfigField "String", "BASE_URL", "\"https://revolut.duckdns.org/\""
+      buildConfigField "String", "BASE_URL", "\"https://revolut.duckdns.org\""
+      buildConfigField "String", "COUNTRY_CURRENCY_URL", "\"http://country.io/currency.json\""
+
+      buildConfigField "String", "BASE_FLAG_SCHEME", "\"https\""
+      buildConfigField "String", "BASE_FLAG_AUTHORITY", "\"www.countryflags.io\""
 
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -56,6 +68,10 @@ android {
       resValue "string", "app_name", "Currency"
 
       buildConfigField "String", "BASE_URL", "\"https://revolut.duckdns.org/\""
+      buildConfigField "String", "COUNTRY_CURRENCY_URL", "\"http://country.io/currency.json\""
+
+      buildConfigField "String", "BASE_FLAG_SCHEME", "\"https\""
+      buildConfigField "String", "BASE_FLAG_AUTHORITY", "\"www.countryflags.io\""
 
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -97,7 +113,15 @@ dependencies {
   }
   kapt "com.github.bumptech.glide:compiler:$GLIDE_VERSION"
 
+
+
   testImplementation 'junit:junit:4.12'
+  testImplementation 'org.mockito:mockito-core:2.+'
+  testImplementation "org.fs.architecture:mvi:$MVI_VERSION"
+
+  kaptTest  "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+  kaptTest "com.google.dagger:dagger-android-processor:$DAGGER_VERSION"
+
   androidTestImplementation 'androidx.test:runner:1.2.0'
   androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }

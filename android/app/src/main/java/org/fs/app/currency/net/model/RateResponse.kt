@@ -23,5 +23,5 @@ import java.util.*
 data class RateResponse(
   val base: String? = null,
   val date: Date? = null,
-  val data: Map<String, Double>? = null,
+  val rates: Map<String, Double>? = null,
   val error: String? = null)

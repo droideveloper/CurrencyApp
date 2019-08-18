@@ -22,8 +22,11 @@ import org.fs.app.currency.util.C.Companion.GET_LATEST
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
+import retrofit2.http.Url
 
 interface Endpoint {
 
-  @GET(GET_LATEST) fun rates(@Query("base") base: String? = null): Observable<Response<RateResponse>>
+  @GET(GET_LATEST) fun rates(@Query("base") base: String): Observable<Response<RateResponse>>
+
+  @GET fun countryCurrencies(@Url url: String): Observable<Response<Map<String, String>>>
 }
