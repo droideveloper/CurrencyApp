@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.fs.app.currency.model
+package org.fs.app.currency.model.entity
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

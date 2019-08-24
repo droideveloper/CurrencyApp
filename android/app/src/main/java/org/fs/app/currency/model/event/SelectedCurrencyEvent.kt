@@ -16,7 +16,7 @@
 
 package org.fs.app.currency.model.event
 
-import org.fs.app.currency.model.RateEntity
+import org.fs.app.currency.model.entity.RateEntity
 import org.fs.architecture.mvi.common.Event
 
 data class SelectedCurrencyEvent(val rate: RateEntity): Event

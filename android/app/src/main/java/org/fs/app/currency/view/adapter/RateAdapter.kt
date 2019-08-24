@@ -21,7 +21,7 @@ import android.view.ViewGroup
 import org.fs.app.currency.common.glide.GlideApp
 import org.fs.app.currency.common.manager.CurrencyToFlagUrlManager
 import org.fs.app.currency.common.manager.RateManager
-import org.fs.app.currency.model.RateEntity
+import org.fs.app.currency.model.entity.RateEntity
 import org.fs.app.currency.view.holder.BaseRateViewHolder
 import org.fs.app.currency.view.holder.SimpleRateViewHolder
 import org.fs.architecture.mvi.common.ForActivity

@@ -21,10 +21,9 @@ import org.fs.app.currency.common.dagger.TestInjection
 import org.fs.app.currency.common.manager.RateManager
 import org.fs.app.currency.common.manager.delegate.OnRateChangeListener
 import org.fs.app.currency.common.manager.delegate.OnRatesChangeListener
-import org.fs.app.currency.model.RateEntity
+import org.fs.app.currency.model.entity.RateEntity
 import org.fs.app.currency.rule.RxSchedulersTestRule
 import org.fs.app.currency.util.C.Companion.EUROPE_CURRENCY
-import org.junit.After
 import org.junit.Before
 import org.junit.ClassRule
 import org.junit.Test

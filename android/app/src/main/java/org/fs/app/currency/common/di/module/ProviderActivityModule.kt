@@ -18,7 +18,7 @@ package org.fs.app.currency.common.di.module
 
 import dagger.Module
 import dagger.Provides
-import org.fs.app.currency.model.RateEntity
+import org.fs.app.currency.model.entity.RateEntity
 import org.fs.architecture.mvi.common.ForActivity
 import org.fs.architecture.mvi.util.ObservableList
 
