@@ -17,7 +17,7 @@
 package org.fs.app.currency.view.holder
 
 import android.view.View
-import org.fs.app.currency.model.RateEntity
+import org.fs.app.currency.model.entity.RateEntity
 import org.fs.architecture.mvi.core.AbstractRecyclerViewHolder
 
 abstract class BaseRateViewHolder(view: View): AbstractRecyclerViewHolder<RateEntity>(view)

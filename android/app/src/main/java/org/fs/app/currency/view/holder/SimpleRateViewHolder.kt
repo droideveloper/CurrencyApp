@@ -29,7 +29,7 @@ import org.fs.app.currency.common.manager.CurrencyToFlagUrlManager
 import org.fs.app.currency.common.manager.RateManager
 import org.fs.app.currency.common.manager.delegate.OnRateChangeListener
 import org.fs.app.currency.common.manager.delegate.OnRatesChangeListener
-import org.fs.app.currency.model.RateEntity
+import org.fs.app.currency.model.entity.RateEntity
 import org.fs.app.currency.util.toCircleDrawableTarget
 import org.fs.architecture.mvi.util.EMPTY
 import org.fs.architecture.mvi.util.inflate
@@ -104,6 +104,12 @@ class SimpleRateViewHolder(view: View,
   }
 
   private fun bindNewRate(value: RateEntity): Observable<RateEntity> = itemView.clicks()
+    .doOnNext {
+      if (value.base == rateManager.rate.base) {
+        requestFocusIfNeeded(value)
+      }
+    }
+    .filter { value.base != rateManager.rate.base }
     .map {
       val text = viewAmountEditText.text
       // defaults will be null we can not parse it
@@ -136,7 +142,7 @@ class SimpleRateViewHolder(view: View,
   override fun onRatesChange(newRates: MutableMap<String, Double>) = maybeUpdateCurrencies()
 
   private fun requestFocusIfNeeded(newValue: RateEntity) {
-    val shouldHaveFocus = adapterPosition == 0
+    val shouldHaveFocus = adapterPosition == 0 && !viewAmountEditText.hasFocus()
     if ((value.base == newValue.base) && shouldHaveFocus) {
       viewAmountEditText.requestFocus()
       inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_NOT_ALWAYS)

@@ -18,7 +18,7 @@ package org.fs.app.currency.common.manager
 
 import org.fs.app.currency.common.manager.delegate.OnRateChangeListener
 import org.fs.app.currency.common.manager.delegate.OnRatesChangeListener
-import org.fs.app.currency.model.RateEntity
+import org.fs.app.currency.model.entity.RateEntity
 
 interface RateManager {
 
