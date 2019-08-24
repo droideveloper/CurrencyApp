@@ -33,12 +33,31 @@
 		3DA1BE772309D9E000AA7C09 /* RateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA1BE762309D9E000AA7C09 /* RateManager.swift */; };
 		3DA1BE792309DACC00AA7C09 /* RateManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA1BE782309DACC00AA7C09 /* RateManagerImp.swift */; };
 		3DFD8CDF23043BAA003BEFA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFD8CDE23043BAA003BEFA7 /* AppDelegate.swift */; };
-		3DFD8CE123043BAA003BEFA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFD8CE023043BAA003BEFA7 /* ViewController.swift */; };
 		3DFD8CE423043BAA003BEFA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFD8CE223043BAA003BEFA7 /* Main.storyboard */; };
 		3DFD8CE623043BAB003BEFA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DFD8CE523043BAB003BEFA7 /* Assets.xcassets */; };
 		3DFD8CE923043BAB003BEFA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFD8CE723043BAB003BEFA7 /* LaunchScreen.storyboard */; };
 		3DFD8CF423043BAC003BEFA7 /* CurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFD8CF323043BAC003BEFA7 /* CurrencyTests.swift */; };
 		3DFD8CFF23043BAC003BEFA7 /* CurrencyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFD8CFE23043BAC003BEFA7 /* CurrencyUITests.swift */; };
+		3DFF87042311282B00910755 /* RateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF87032311282B00910755 /* RateViewModel.swift */; };
+		3DFF87062311295800910755 /* LandingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF87052311295800910755 /* LandingPageViewModel.swift */; };
+		3DFF87082311299100910755 /* LandingPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF87072311299100910755 /* LandingPageController.swift */; };
+		3DFF870A23112A8200910755 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF870923112A8200910755 /* Operations.swift */; };
+		3DFF870C23112F0400910755 /* RateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF870B23112F0400910755 /* RateController.swift */; };
+		3DFF870F23112F1E00910755 /* RateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF870E23112F1E00910755 /* RateDataSource.swift */; };
+		3DFF871223112F5700910755 /* SimpleRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF871123112F5700910755 /* SimpleRateCell.swift */; };
+		3DFF87142311310B00910755 /* LoadRateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF87132311310B00910755 /* LoadRateEvent.swift */; };
+		3DFF87162311315900910755 /* LoadCountryCurrenciesEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF87152311315900910755 /* LoadCountryCurrenciesEvent.swift */; };
+		3DFF87182311317E00910755 /* SelectedCurrencyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF87172311317E00910755 /* SelectedCurrencyEvent.swift */; };
+		3DFF871A231131D500910755 /* LoadRateIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF8719231131D500910755 /* LoadRateIntent.swift */; };
+		3DFF87232311413A00910755 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF87222311413A00910755 /* Dependency.swift */; };
+		3DFF87252311416200910755 /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF87242311416200910755 /* AppDependency.swift */; };
+		3DFF87272311458B00910755 /* ConcurrencyImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF87262311458B00910755 /* ConcurrencyImp.swift */; };
+		3DFF87292311479A00910755 /* ControllerDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF87282311479A00910755 /* ControllerDependency.swift */; };
+		3DFF872B23114AB600910755 /* LoadCountryCurrenciesIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF872A23114AB600910755 /* LoadCountryCurrenciesIntent.swift */; };
+		3DFF872D231164A300910755 /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF872C231164A300910755 /* UIImageView+Kingfisher.swift */; };
+		3DFF872F231164EA00910755 /* String+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF872E231164EA00910755 /* String+URL.swift */; };
+		3DFF8731231165AD00910755 /* SimpleRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DFF8730231165AD00910755 /* SimpleRateCell.xib */; };
+		3DFF873323118B2100910755 /* UIEditTextField+Done.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF873223118B2100910755 /* UIEditTextField+Done.swift */; };
 		435FC00E62A107BA716A96DF /* Pods_CurrencyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB13B94BB5C3CB99D1D4763C /* Pods_CurrencyUITests.framework */; };
 		9DF6D381E938B921544C099D /* Pods_Currency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E40A4200E80CA5828A6E07 /* Pods_Currency.framework */; };
 /* End PBXBuildFile section */
@@ -91,7 +110,6 @@
 		3DA1BE782309DACC00AA7C09 /* RateManagerImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateManagerImp.swift; sourceTree = "<group>"; };
 		3DFD8CDB23043BAA003BEFA7 /* Currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Currency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFD8CDE23043BAA003BEFA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DFD8CE023043BAA003BEFA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DFD8CE323043BAA003BEFA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DFD8CE523043BAB003BEFA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DFD8CE823043BAB003BEFA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,6 +120,26 @@
 		3DFD8CFA23043BAC003BEFA7 /* CurrencyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFD8CFE23043BAC003BEFA7 /* CurrencyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyUITests.swift; sourceTree = "<group>"; };
 		3DFD8D0023043BAC003BEFA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DFF87032311282B00910755 /* RateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewModel.swift; sourceTree = "<group>"; };
+		3DFF87052311295800910755 /* LandingPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewModel.swift; sourceTree = "<group>"; };
+		3DFF87072311299100910755 /* LandingPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageController.swift; sourceTree = "<group>"; };
+		3DFF870923112A8200910755 /* Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
+		3DFF870B23112F0400910755 /* RateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateController.swift; sourceTree = "<group>"; };
+		3DFF870E23112F1E00910755 /* RateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateDataSource.swift; sourceTree = "<group>"; };
+		3DFF871123112F5700910755 /* SimpleRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRateCell.swift; sourceTree = "<group>"; };
+		3DFF87132311310B00910755 /* LoadRateEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadRateEvent.swift; sourceTree = "<group>"; };
+		3DFF87152311315900910755 /* LoadCountryCurrenciesEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCountryCurrenciesEvent.swift; sourceTree = "<group>"; };
+		3DFF87172311317E00910755 /* SelectedCurrencyEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCurrencyEvent.swift; sourceTree = "<group>"; };
+		3DFF8719231131D500910755 /* LoadRateIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadRateIntent.swift; sourceTree = "<group>"; };
+		3DFF87222311413A00910755 /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
+		3DFF87242311416200910755 /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
+		3DFF87262311458B00910755 /* ConcurrencyImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyImp.swift; sourceTree = "<group>"; };
+		3DFF87282311479A00910755 /* ControllerDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerDependency.swift; sourceTree = "<group>"; };
+		3DFF872A23114AB600910755 /* LoadCountryCurrenciesIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCountryCurrenciesIntent.swift; sourceTree = "<group>"; };
+		3DFF872C231164A300910755 /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		3DFF872E231164EA00910755 /* String+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+URL.swift"; sourceTree = "<group>"; };
+		3DFF8730231165AD00910755 /* SimpleRateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleRateCell.xib; sourceTree = "<group>"; };
+		3DFF873223118B2100910755 /* UIEditTextField+Done.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEditTextField+Done.swift"; sourceTree = "<group>"; };
 		53A615223B0E7798FAD0B6CC /* Pods-CurrencyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyUITests.release.xcconfig"; path = "Target Support Files/Pods-CurrencyUITests/Pods-CurrencyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		70E40A4200E80CA5828A6E07 /* Pods_Currency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Currency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AE61EF3116EA566CE970E4 /* Pods-Currency.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currency.debug.xcconfig"; path = "Target Support Files/Pods-Currency/Pods-Currency.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,8 +178,10 @@
 		3DA1BE3D2309A56C00AA7C09 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3DFF87212311412E00910755 /* DI */,
 				3DA1BE682309D58600AA7C09 /* Manager */,
 				3DA1BE5F2309D44B00AA7C09 /* Repo */,
+				3DFF87262311458B00910755 /* ConcurrencyImp.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -161,6 +201,10 @@
 		3DA1BE3F2309A58400AA7C09 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				3DFF870923112A8200910755 /* Operations.swift */,
+				3DFF872C231164A300910755 /* UIImageView+Kingfisher.swift */,
+				3DFF872E231164EA00910755 /* String+URL.swift */,
+				3DFF873223118B2100910755 /* UIEditTextField+Done.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -181,8 +225,12 @@
 		3DA1BE412309A5B000AA7C09 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3DFF871023112F3200910755 /* Cell */,
+				3DFF870D23112F0900910755 /* DataSource */,
 				3DA1BE4C2309CC0500AA7C09 /* LandingPageView.swift */,
 				3DA1BE4E2309CC3500AA7C09 /* RateView.swift */,
+				3DFF87072311299100910755 /* LandingPageController.swift */,
+				3DFF870B23112F0400910755 /* RateController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +238,8 @@
 		3DA1BE422309A5B600AA7C09 /* VM */ = {
 			isa = PBXGroup;
 			children = (
+				3DFF87032311282B00910755 /* RateViewModel.swift */,
+				3DFF87052311295800910755 /* LandingPageViewModel.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -205,6 +255,8 @@
 		3DA1BE442309CA0900AA7C09 /* Intent */ = {
 			isa = PBXGroup;
 			children = (
+				3DFF8719231131D500910755 /* LoadRateIntent.swift */,
+				3DFF872A23114AB600910755 /* LoadCountryCurrenciesIntent.swift */,
 			);
 			path = Intent;
 			sourceTree = "<group>";
@@ -212,6 +264,9 @@
 		3DA1BE452309CA1100AA7C09 /* Event */ = {
 			isa = PBXGroup;
 			children = (
+				3DFF87132311310B00910755 /* LoadRateEvent.swift */,
+				3DFF87152311315900910755 /* LoadCountryCurrenciesEvent.swift */,
+				3DFF87172311317E00910755 /* SelectedCurrencyEvent.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -291,7 +346,6 @@
 				3DA1BE3E2309A57E00AA7C09 /* Model */,
 				3DA1BE3D2309A56C00AA7C09 /* Common */,
 				3DFD8CDE23043BAA003BEFA7 /* AppDelegate.swift */,
-				3DFD8CE023043BAA003BEFA7 /* ViewController.swift */,
 				3DFD8CE223043BAA003BEFA7 /* Main.storyboard */,
 				3DFD8CE523043BAB003BEFA7 /* Assets.xcassets */,
 				3DFD8CE723043BAB003BEFA7 /* LaunchScreen.storyboard */,
@@ -316,6 +370,33 @@
 				3DFD8D0023043BAC003BEFA7 /* Info.plist */,
 			);
 			path = CurrencyUITests;
+			sourceTree = "<group>";
+		};
+		3DFF870D23112F0900910755 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				3DFF870E23112F1E00910755 /* RateDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		3DFF871023112F3200910755 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3DFF871123112F5700910755 /* SimpleRateCell.swift */,
+				3DFF8730231165AD00910755 /* SimpleRateCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3DFF87212311412E00910755 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				3DFF87222311413A00910755 /* Dependency.swift */,
+				3DFF87242311416200910755 /* AppDependency.swift */,
+				3DFF87282311479A00910755 /* ControllerDependency.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		B12EC32E34A61D6E192FC119 /* Pods */ = {
@@ -450,6 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DFD8CE923043BAB003BEFA7 /* LaunchScreen.storyboard in Resources */,
+				3DFF8731231165AD00910755 /* SimpleRateCell.xib in Resources */,
 				3DFD8CE623043BAB003BEFA7 /* Assets.xcassets in Resources */,
 				3DFD8CE423043BAA003BEFA7 /* Main.storyboard in Resources */,
 			);
@@ -564,12 +646,21 @@
 			files = (
 				3DA1BE612309D46000AA7C09 /* CountryCurrenciesRepository.swift in Sources */,
 				3DA1BE582309CD8800AA7C09 /* EndpointRequestable.swift in Sources */,
+				3DFF87232311413A00910755 /* Dependency.swift in Sources */,
 				3DA1BE772309D9E000AA7C09 /* RateManager.swift in Sources */,
+				3DFF872F231164EA00910755 /* String+URL.swift in Sources */,
 				3DA1BE5E2309CF2000AA7C09 /* EndpointImp.swift in Sources */,
 				3DA1BE652309D4CA00AA7C09 /* RateRepositoryImp.swift in Sources */,
+				3DFF872D231164A300910755 /* UIImageView+Kingfisher.swift in Sources */,
 				3DA1BE6E2309D6A500AA7C09 /* CurrencyToCountryManagerImp.swift in Sources */,
+				3DFF870F23112F1E00910755 /* RateDataSource.swift in Sources */,
 				3DA1BE542309CC8300AA7C09 /* Resource.swift in Sources */,
+				3DFF87182311317E00910755 /* SelectedCurrencyEvent.swift in Sources */,
+				3DFF87062311295800910755 /* LandingPageViewModel.swift in Sources */,
 				3DA1BE492309CB9200AA7C09 /* LandingPageModel.swift in Sources */,
+				3DFF870C23112F0400910755 /* RateController.swift in Sources */,
+				3DFF873323118B2100910755 /* UIEditTextField+Done.swift in Sources */,
+				3DFF870A23112A8200910755 /* Operations.swift in Sources */,
 				3DA1BE672309D54000AA7C09 /* CountryCurrenciesRepositoryImp.swift in Sources */,
 				3DA1BE5C2309CED400AA7C09 /* Endpoint.swift in Sources */,
 				3DA1BE512309CC6100AA7C09 /* EndpointProxy.swift in Sources */,
@@ -577,17 +668,26 @@
 				3DA1BE4D2309CC0500AA7C09 /* LandingPageView.swift in Sources */,
 				3DA1BE752309D9AC00AA7C09 /* RatesChangeDelegate.swift in Sources */,
 				3DA1BE792309DACC00AA7C09 /* RateManagerImp.swift in Sources */,
-				3DFD8CE123043BAA003BEFA7 /* ViewController.swift in Sources */,
+				3DFF87042311282B00910755 /* RateViewModel.swift in Sources */,
 				3DA1BE6A2309D5A900AA7C09 /* CurrencyToFlagUrlManager.swift in Sources */,
+				3DFF87142311310B00910755 /* LoadRateEvent.swift in Sources */,
+				3DFF87082311299100910755 /* LandingPageController.swift in Sources */,
 				3DA1BE562309CD2500AA7C09 /* EndpointProxyImp.swift in Sources */,
+				3DFF872B23114AB600910755 /* LoadCountryCurrenciesIntent.swift in Sources */,
 				3DA1BE732309D97A00AA7C09 /* RateChangeDelegate.swift in Sources */,
 				3DA1BE632309D46C00AA7C09 /* RateRepository.swift in Sources */,
 				3DA1BE5A2309CE7100AA7C09 /* RateResponse.swift in Sources */,
 				3DA1BE4B2309CBD900AA7C09 /* RateModel.swift in Sources */,
 				3DA1BE702309D84600AA7C09 /* CurrencyToFlagUrlManagerImp.swift in Sources */,
+				3DFF87292311479A00910755 /* ControllerDependency.swift in Sources */,
+				3DFF87272311458B00910755 /* ConcurrencyImp.swift in Sources */,
+				3DFF87162311315900910755 /* LoadCountryCurrenciesEvent.swift in Sources */,
+				3DFF87252311416200910755 /* AppDependency.swift in Sources */,
+				3DFF871223112F5700910755 /* SimpleRateCell.swift in Sources */,
 				3DFD8CDF23043BAA003BEFA7 /* AppDelegate.swift in Sources */,
 				3DA1BE6C2309D5FC00AA7C09 /* CurrencyToCountryManager.swift in Sources */,
 				3DA1BE472309CA7100AA7C09 /* RateEntity.swift in Sources */,
+				3DFF871A231131D500910755 /* LoadRateIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,6 +865,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Currency/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -783,6 +884,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Currency/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

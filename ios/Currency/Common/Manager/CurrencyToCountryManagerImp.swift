@@ -10,6 +10,12 @@ import Foundation
 
 public class CurrencyToCountryManagerImp: CurrencyToCountryManager {
 	
+	private let EURO = "EUR"
+	private let DOLLAR = "USD"
+	
+	private let EUROPE = "EU"
+	private let USA = "US"
+	
 	private lazy var cache = {
 		return Dictionary<String, String>()
 	}()
@@ -25,7 +31,13 @@ public class CurrencyToCountryManagerImp: CurrencyToCountryManager {
 	}
 	
 	public func countryCodeFor(currencyCode: String) -> String {
-		return (cache.first { key, value in key == currencyCode })?.value ?? .empty
+		if currencyCode == EURO {
+			return EUROPE
+		} else if currencyCode == DOLLAR {
+			return USA
+		} else {
+			return (cache.first { key, value in value == currencyCode })?.key ?? .empty
+		}
 	}
 	
 	public func clearAll() {

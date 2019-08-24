@@ -7,15 +7,39 @@
 //
 
 import UIKit
+import MVICocoa
+import Swinject
+import SwinjectStoryboard
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, Injectable {
+	
+	lazy var container: Container = {
+		let container = Container()
+		// app dependency
+		let appDependency = AppDependency(container: container)
+		appDependency.setUp()
+		// controller dependency
+		let controllerDependency = ControllerDependency(container: container)
+		controllerDependency.setUp()
+		// return container
+		return container
+	}()
 
 	var window: UIWindow?
 
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+		
+		let window = UIWindow(frame: UIScreen.main.bounds)
+		let storyborad = SwinjectStoryboard.create(name: "Main", bundle: Bundle.main, container: container)
+		let landingPageController = storyborad.instantiateViewController(withIdentifier: String(describing: LandingPageController.self))
+		window.rootViewController = landingPageController
+		
+		self.window = window
+		window.makeKeyAndVisible()
+		
 		return true
 	}
 
@@ -40,7 +64,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationWillTerminate(_ application: UIApplication) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
-
-
 }
 

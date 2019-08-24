@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import MVICocoa
 
 public class RateManagerImp: RateManager {
 	
 	private var _rates: Dictionary<String, Double> = [:]
-	private var _rate: RateEntity = .empty
+	private var _rate: RateEntity = RateEntity("EUR", 0.0)
 	
 	private var rateChangeDelegates = Array<RateChangeDelegate>()
 	private var ratesChangeDelegates = Array<RatesChangeDelegate>()
@@ -47,7 +48,7 @@ public class RateManagerImp: RateManager {
 	}
 	
 	public func amountFor(currencyCode: String) -> Double {
-		return _rates[currencyCode] ?? 0.0
+		return (_rates[currencyCode] ?? 0.0) * _rate.amount
 	}
 	
 	public func parse(_ text: String) -> Double {
@@ -80,11 +81,18 @@ public class RateManagerImp: RateManager {
 	}
 	
 	private func notifyRateChange() {
-		rateChangeDelegates.forEach { delegate in delegate.rateChange(newValue: self._rate) }
+		rateChangeDelegates.forEach { delegate in
+			DispatchQueue.main.async { [unowned self] in
+				delegate.rateChange(newValue: self._rate)
+			}
+		}
 	}
 	
 	private func notifyRatesChange() {
-		let locale = Locale(identifier: <#T##String#>)
-		ratesChangeDelegates.forEach { delegate in delegate.ratesChange(newRates: self._rates) }
+		ratesChangeDelegates.forEach { delegate in
+			DispatchQueue.main.async { [unowned self] in
+				delegate.ratesChange(newRates: self._rates)
+			}
+		}
 	}
 }
