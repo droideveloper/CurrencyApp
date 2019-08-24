@@ -43,6 +43,12 @@ public class RateManagerImp: RateManager {
 		}
 	}
 	
+	private var dispatchOnQueue: Bool
+	
+	init(dispatchOnQueue: Bool = true) {
+		self.dispatchOnQueue = dispatchOnQueue
+	}
+	
 	public func format(_ amount: Double) -> String {
 		return String(format: "%.2f", amount)
 	}
@@ -56,6 +62,11 @@ public class RateManagerImp: RateManager {
 			return 0.0
 		}
 		return amount
+	}
+	
+	public func clearAll() {
+		_rates = [:]
+		_rate = .empty
 	}
 	
 	public func addRateChangeDelegate(_ delegate: RateChangeDelegate) {
@@ -82,7 +93,11 @@ public class RateManagerImp: RateManager {
 	
 	private func notifyRateChange() {
 		rateChangeDelegates.forEach { delegate in
-			DispatchQueue.main.async { [unowned self] in
+			if dispatchOnQueue {
+				DispatchQueue.main.async { [unowned self] in
+					delegate.rateChange(newValue: self._rate)
+				}
+			} else {
 				delegate.rateChange(newValue: self._rate)
 			}
 		}
@@ -90,7 +105,11 @@ public class RateManagerImp: RateManager {
 	
 	private func notifyRatesChange() {
 		ratesChangeDelegates.forEach { delegate in
-			DispatchQueue.main.async { [unowned self] in
+			if dispatchOnQueue {
+				DispatchQueue.main.async { [unowned self] in
+					delegate.ratesChange(newRates: self._rates)
+				}
+			} else {
 				delegate.ratesChange(newRates: self._rates)
 			}
 		}

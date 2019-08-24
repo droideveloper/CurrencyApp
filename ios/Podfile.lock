@@ -57,7 +57,7 @@ CHECKOUT OPTIONS:
     :commit: 3c9f96441419fc2fb07e4aa26e60e6ddd8b38fd8
     :git: https://github.com/droideveloper/KingfisherExtensions.git
   MVICocoa:
-    :commit: f81722fc2c6a44e5e4ce88558ff58a8b8cd5ae58
+    :commit: 88225b3d62a4f5671c976ed7b4fb34d377e27cae
     :git: https://github.com/droideveloper/MVICocoa.git
   Persist:
     :commit: dd38009b708457418a06a1448ff154e00ab78314
