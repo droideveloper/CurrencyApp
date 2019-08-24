@@ -26,7 +26,7 @@ PODS:
 DEPENDENCIES:
   - FisherExtensions (from `https://github.com/droideveloper/KingfisherExtensions.git`, branch `master`)
   - Kingfisher (~> 5.0)
-  - MVICocoa (from `https://github.com/droideveloper/MVICocoa.git`, branch `master`)
+  - MVICocoa (from `https://github.com/droideveloper/MVICocoa.git`, branch `release/1.0.1`)
   - Persist (from `https://github.com/droideveloper/Persist.git`, branch `master`)
   - SwinjectStoryboard
 
@@ -46,7 +46,7 @@ EXTERNAL SOURCES:
     :branch: master
     :git: https://github.com/droideveloper/KingfisherExtensions.git
   MVICocoa:
-    :branch: master
+    :branch: release/1.0.1
     :git: https://github.com/droideveloper/MVICocoa.git
   Persist:
     :branch: master
@@ -57,7 +57,7 @@ CHECKOUT OPTIONS:
     :commit: 3c9f96441419fc2fb07e4aa26e60e6ddd8b38fd8
     :git: https://github.com/droideveloper/KingfisherExtensions.git
   MVICocoa:
-    :commit: 12eaa790a57cae3490aac8397989f779c54471cc
+    :commit: f81722fc2c6a44e5e4ce88558ff58a8b8cd5ae58
     :git: https://github.com/droideveloper/MVICocoa.git
   Persist:
     :commit: dd38009b708457418a06a1448ff154e00ab78314
@@ -76,6 +76,6 @@ SPEC CHECKSUMS:
   Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: c4a83cdec2f1032a6f5f91e23ee68c4ae49cfde7
+PODFILE CHECKSUM: 36e16e724e996ba36d3edf26efb160f99ecc26e3
 
 COCOAPODS: 1.7.1

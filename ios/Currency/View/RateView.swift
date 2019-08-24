@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import MVICocoa
 
-public protocol RateView {
-	func render(_ model: RateModel)
+public protocol RateView: class, View {
+	func render(model: RateModel)
 }

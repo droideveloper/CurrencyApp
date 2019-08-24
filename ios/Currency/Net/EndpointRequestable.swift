@@ -15,13 +15,27 @@ enum EndpointRequestable: Requestable {
 	
 	var baseUrl: String {
 		get {
-			return .empty
+			return "https://revolut.duckdns.org/"
 		}
 	}
 	
 	var request: URLRequest {
 		get {
-			fatalError("not implemented yet")
+			switch self {
+			case .rates(let base):
+				if let base = base {
+					return create(url: "\(baseUrl)/latest?base=\(base)", httpMethod: .get)
+				}
+				return create(url: "\(baseUrl)/latest?base=EUR", httpMethod: .get)
+			case .countryCurrencies(let url):
+				return create(url: url, httpMethod: .get)
+			}
+		}
+	}
+	
+	var interceptors: [Interceptor]? {
+		get {
+			return nil
 		}
 	}
 }

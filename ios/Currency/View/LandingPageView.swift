@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import MVICocoa
 
-public protocol LandingPageView {
-	func render(_ model: LandingPageModel)
+public protocol LandingPageView: class, View {
+	func render(model: LandingPageModel)
 }

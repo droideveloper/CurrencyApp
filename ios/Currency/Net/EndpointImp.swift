@@ -14,32 +14,43 @@ import Alamofire
 
 public class EndpointImp: Endpoint {
 	
+	private let decoder: JSONDecoder
+	private let dateFormat: DateFormatter = {
+		let formatter = DateFormatter()
+		formatter.dateFormat = "yyyy-MM-dd"
+		return formatter
+	}()
+	
+	public init() {
+		let decoder = JSONDecoder()
+		decoder.dateDecodingStrategy = .formatted(dateFormat)
+		self.decoder = decoder
+	}
+	
 	public func rates(_ base: String?) -> Observable<RateResponse> {
 		let method = EndpointRequestable.rates(base)
 		return method.request
-								 .perform()
+			.perform(decoder: decoder)
 	}
 	
 	public func countryCurrencies(_ url: String) -> Observable<Dictionary<String, String>> {
 		let method = EndpointRequestable.countryCurrencies(url)
 		return method.request
-							 	 .perform()
+			.perform()
 	}
 }
 
 extension URLRequest {
 	
-	public func perform<T>(interceptor: Interceptor? = nil) -> Observable<T> where T: Decodable {
-		guard let interceptor = interceptor else {
-			return internalPerform()
-		}
-		return interceptor.intercept(self)
-			.internalPerform()
-	}
-	
-	fileprivate func internalPerform<T>() -> Observable<T> where T: Decodable {
+	func perform<T>() -> Observable<T> where T: Decodable {
 		return Alamofire.request(self)
 			.serialize()
+			.debug(with: self)
+	}
+	
+	func perform<T>(decoder: JSONDecoder) -> Observable<T> where T: Decodable {
+		return Alamofire.request(self)
+			.serialize(decoder: decoder)
 			.debug(with: self)
 	}
 }
