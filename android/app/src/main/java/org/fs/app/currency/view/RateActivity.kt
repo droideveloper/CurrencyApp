@@ -15,10 +15,8 @@
  */
 package org.fs.app.currency.view
 
-import android.content.Context
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.inputmethod.InputMethodManager
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import io.reactivex.Observable
@@ -26,7 +24,7 @@ import kotlinx.android.synthetic.main.view_rates_activity.*
 import org.fs.app.currency.R
 import org.fs.app.currency.common.manager.RateManager
 import org.fs.app.currency.common.manager.delegate.OnRateChangeListener
-import org.fs.app.currency.model.RateEntity
+import org.fs.app.currency.model.entity.RateEntity
 import org.fs.app.currency.model.RateModel
 import org.fs.app.currency.model.event.LoadRatesEvent
 import org.fs.app.currency.util.C.Companion.RECYCLER_CACHE_SIZE

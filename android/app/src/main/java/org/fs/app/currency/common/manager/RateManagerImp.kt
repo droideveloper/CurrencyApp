@@ -18,7 +18,7 @@ package org.fs.app.currency.common.manager
 
 import org.fs.app.currency.common.manager.delegate.OnRateChangeListener
 import org.fs.app.currency.common.manager.delegate.OnRatesChangeListener
-import org.fs.app.currency.model.RateEntity
+import org.fs.app.currency.model.entity.RateEntity
 import org.fs.app.currency.util.C.Companion.EUROPE_CURRENCY
 import java.text.DecimalFormat
 import javax.inject.Inject
@@ -32,7 +32,8 @@ class RateManagerImp @Inject constructor(): RateManager {
   private val rateChangeCallbacks by lazy { ArrayList<OnRateChangeListener>() }
   private val amountFormat by lazy { DecimalFormat("#.##") }
 
-  override var rate: RateEntity = RateEntity().apply {
+  override var rate: RateEntity = RateEntity()
+    .apply {
     base = EUROPE_CURRENCY
     amount = 0.0
   }
@@ -50,10 +51,7 @@ class RateManagerImp @Inject constructor(): RateManager {
 
   override fun amount(): Double = rate.amount
 
-  override fun amountForCurrency(currencyCode: String): Double {
-    val ratio = rates[currencyCode] ?: 0.0
-    return (ratio * rate.amount * 100.0).roundToLong() / 100.0
-  }
+  override fun amountForCurrency(currencyCode: String): Double = (rates[currencyCode] ?: 0.0) * amount()
 
   override fun parse(text: String): Double {
     val number = amountFormat.parse(text)
@@ -63,30 +61,22 @@ class RateManagerImp @Inject constructor(): RateManager {
     return 0.0
   }
 
-  override fun format(amount: Double): String = amountFormat.format((amount * 100.0).roundToLong() / 100.0)
+  override fun format(amount: Double): String = String.format("%.2f", amount)
 
   override fun addOnRateChangedListener(callback: OnRateChangeListener) {
-    synchronized(this) {
-      rateChangeCallbacks.add(callback)
-    }
+    rateChangeCallbacks.add(callback)
   }
 
   override fun removeOnRateChangedListener(callback: OnRateChangeListener) {
-    synchronized(this) {
-      rateChangeCallbacks.remove(callback)
-    }
+    rateChangeCallbacks.remove(callback)
   }
 
   override fun addOnRatesChangedListener(callback: OnRatesChangeListener) {
-    synchronized(this) {
-      ratesChangeCallbacks.add(callback)
-    }
+    ratesChangeCallbacks.add(callback)
   }
 
   override fun removeOnRatesChangedListener(callback: OnRatesChangeListener) {
-    synchronized(this) {
-      ratesChangeCallbacks.remove(callback)
-    }
+    ratesChangeCallbacks.remove(callback)
   }
 
 

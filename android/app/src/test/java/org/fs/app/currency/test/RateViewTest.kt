@@ -20,7 +20,7 @@ import org.fs.app.currency.common.base.TestCase
 import org.fs.app.currency.common.dagger.TestInjection
 import org.fs.app.currency.common.manager.RateManager
 import org.fs.app.currency.mock.RateActivity
-import org.fs.app.currency.model.RateEntity
+import org.fs.app.currency.model.entity.RateEntity
 import org.fs.app.currency.rule.RxSchedulersTestRule
 
 import org.junit.Before

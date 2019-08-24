@@ -16,7 +16,7 @@
 package org.fs.app.currency.common.manager.delegate;
 
 import io.reactivex.annotations.NonNull;
-import org.fs.app.currency.model.RateEntity;
+import org.fs.app.currency.model.entity.RateEntity;
 
 public interface OnRateChangeListener {
   void onRateChange(@NonNull RateEntity newValue);
