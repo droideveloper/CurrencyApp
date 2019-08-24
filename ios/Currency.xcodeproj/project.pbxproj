@@ -32,12 +32,28 @@
 		3DA1BE752309D9AC00AA7C09 /* RatesChangeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA1BE742309D9AC00AA7C09 /* RatesChangeDelegate.swift */; };
 		3DA1BE772309D9E000AA7C09 /* RateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA1BE762309D9E000AA7C09 /* RateManager.swift */; };
 		3DA1BE792309DACC00AA7C09 /* RateManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA1BE782309DACC00AA7C09 /* RateManagerImp.swift */; };
+		3DF27B6C2311AD4900604212 /* UnitTestDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF27B6B2311AD4900604212 /* UnitTestDependency.swift */; };
+		3DF27B6F2311AE1300604212 /* MockConcurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF27B6E2311AE1300604212 /* MockConcurrency.swift */; };
+		3DF27B722311AEE600604212 /* CountDownLetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF27B712311AEE600604212 /* CountDownLetch.swift */; };
+		3DF27B742311AF8A00604212 /* MockEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF27B732311AF8A00604212 /* MockEndpoint.swift */; };
+		3DF27B772311B12800604212 /* MockRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF27B762311B12800604212 /* MockRateView.swift */; };
+		3DF27B792311B19A00604212 /* BaseMockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF27B782311B19A00604212 /* BaseMockView.swift */; };
+		3DF27B7B2311B2EA00604212 /* MockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF27B7A2311B2EA00604212 /* MockApp.swift */; };
+		3DF27B7D2311B37200604212 /* UITestDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF27B7C2311B37200604212 /* UITestDependency.swift */; };
+		3DF27B802311B9D200604212 /* RateViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF27B7F2311B9D200604212 /* RateViewTest.swift */; };
+		3DFB0FA12311DA0D002788A6 /* MockScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB0FA02311DA0D002788A6 /* MockScheduler.swift */; };
+		3DFB0FA32311DA98002788A6 /* LandingPageViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB0FA22311DA98002788A6 /* LandingPageViewTest.swift */; };
+		3DFB0FA52311DAD6002788A6 /* MockLandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB0FA42311DAD6002788A6 /* MockLandingPageView.swift */; };
+		3DFB0FA72311DDD2002788A6 /* RateRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB0FA62311DDD2002788A6 /* RateRepositoryTest.swift */; };
+		3DFB0FA92311E210002788A6 /* RateManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB0FA82311E210002788A6 /* RateManagerTest.swift */; };
+		3DFB0FAB2311E440002788A6 /* MockRateChangeCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB0FAA2311E440002788A6 /* MockRateChangeCallback.swift */; };
+		3DFB0FAD2311E4B5002788A6 /* MockRatesChangeCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB0FAC2311E4B5002788A6 /* MockRatesChangeCallback.swift */; };
+		3DFB0FAF2311EA50002788A6 /* CurrencyToFlagUrlManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB0FAE2311EA50002788A6 /* CurrencyToFlagUrlManagerTest.swift */; };
+		3DFB0FB12311ED6C002788A6 /* CountryCurrenciesRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFB0FB02311ED6C002788A6 /* CountryCurrenciesRepositoryTest.swift */; };
 		3DFD8CDF23043BAA003BEFA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFD8CDE23043BAA003BEFA7 /* AppDelegate.swift */; };
 		3DFD8CE423043BAA003BEFA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFD8CE223043BAA003BEFA7 /* Main.storyboard */; };
 		3DFD8CE623043BAB003BEFA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DFD8CE523043BAB003BEFA7 /* Assets.xcassets */; };
 		3DFD8CE923043BAB003BEFA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFD8CE723043BAB003BEFA7 /* LaunchScreen.storyboard */; };
-		3DFD8CF423043BAC003BEFA7 /* CurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFD8CF323043BAC003BEFA7 /* CurrencyTests.swift */; };
-		3DFD8CFF23043BAC003BEFA7 /* CurrencyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFD8CFE23043BAC003BEFA7 /* CurrencyUITests.swift */; };
 		3DFF87042311282B00910755 /* RateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF87032311282B00910755 /* RateViewModel.swift */; };
 		3DFF87062311295800910755 /* LandingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF87052311295800910755 /* LandingPageViewModel.swift */; };
 		3DFF87082311299100910755 /* LandingPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF87072311299100910755 /* LandingPageController.swift */; };
@@ -108,6 +124,24 @@
 		3DA1BE742309D9AC00AA7C09 /* RatesChangeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesChangeDelegate.swift; sourceTree = "<group>"; };
 		3DA1BE762309D9E000AA7C09 /* RateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateManager.swift; sourceTree = "<group>"; };
 		3DA1BE782309DACC00AA7C09 /* RateManagerImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateManagerImp.swift; sourceTree = "<group>"; };
+		3DF27B6B2311AD4900604212 /* UnitTestDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestDependency.swift; sourceTree = "<group>"; };
+		3DF27B6E2311AE1300604212 /* MockConcurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConcurrency.swift; sourceTree = "<group>"; };
+		3DF27B712311AEE600604212 /* CountDownLetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownLetch.swift; sourceTree = "<group>"; };
+		3DF27B732311AF8A00604212 /* MockEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEndpoint.swift; sourceTree = "<group>"; };
+		3DF27B762311B12800604212 /* MockRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRateView.swift; sourceTree = "<group>"; };
+		3DF27B782311B19A00604212 /* BaseMockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMockView.swift; sourceTree = "<group>"; };
+		3DF27B7A2311B2EA00604212 /* MockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApp.swift; sourceTree = "<group>"; };
+		3DF27B7C2311B37200604212 /* UITestDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestDependency.swift; sourceTree = "<group>"; };
+		3DF27B7F2311B9D200604212 /* RateViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewTest.swift; sourceTree = "<group>"; };
+		3DFB0FA02311DA0D002788A6 /* MockScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockScheduler.swift; sourceTree = "<group>"; };
+		3DFB0FA22311DA98002788A6 /* LandingPageViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewTest.swift; sourceTree = "<group>"; };
+		3DFB0FA42311DAD6002788A6 /* MockLandingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLandingPageView.swift; sourceTree = "<group>"; };
+		3DFB0FA62311DDD2002788A6 /* RateRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateRepositoryTest.swift; sourceTree = "<group>"; };
+		3DFB0FA82311E210002788A6 /* RateManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateManagerTest.swift; sourceTree = "<group>"; };
+		3DFB0FAA2311E440002788A6 /* MockRateChangeCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRateChangeCallback.swift; sourceTree = "<group>"; };
+		3DFB0FAC2311E4B5002788A6 /* MockRatesChangeCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRatesChangeCallback.swift; sourceTree = "<group>"; };
+		3DFB0FAE2311EA50002788A6 /* CurrencyToFlagUrlManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyToFlagUrlManagerTest.swift; sourceTree = "<group>"; };
+		3DFB0FB02311ED6C002788A6 /* CountryCurrenciesRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCurrenciesRepositoryTest.swift; sourceTree = "<group>"; };
 		3DFD8CDB23043BAA003BEFA7 /* Currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Currency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFD8CDE23043BAA003BEFA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DFD8CE323043BAA003BEFA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,11 +149,8 @@
 		3DFD8CE823043BAB003BEFA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DFD8CEA23043BAB003BEFA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DFD8CEF23043BAC003BEFA7 /* CurrencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DFD8CF323043BAC003BEFA7 /* CurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTests.swift; sourceTree = "<group>"; };
 		3DFD8CF523043BAC003BEFA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DFD8CFA23043BAC003BEFA7 /* CurrencyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurrencyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DFD8CFE23043BAC003BEFA7 /* CurrencyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyUITests.swift; sourceTree = "<group>"; };
-		3DFD8D0023043BAC003BEFA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DFF87032311282B00910755 /* RateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewModel.swift; sourceTree = "<group>"; };
 		3DFF87052311295800910755 /* LandingPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewModel.swift; sourceTree = "<group>"; };
 		3DFF87072311299100910755 /* LandingPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageController.swift; sourceTree = "<group>"; };
@@ -314,12 +345,65 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		3DF27B6A2311AD2200604212 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				3DF27B6B2311AD4900604212 /* UnitTestDependency.swift */,
+				3DF27B7A2311B2EA00604212 /* MockApp.swift */,
+				3DF27B7C2311B37200604212 /* UITestDependency.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		3DF27B6D2311AE0100604212 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				3DF27B752311B11D00604212 /* View */,
+				3DF27B6E2311AE1300604212 /* MockConcurrency.swift */,
+				3DF27B732311AF8A00604212 /* MockEndpoint.swift */,
+				3DFB0FA02311DA0D002788A6 /* MockScheduler.swift */,
+				3DFB0FAA2311E440002788A6 /* MockRateChangeCallback.swift */,
+				3DFB0FAC2311E4B5002788A6 /* MockRatesChangeCallback.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		3DF27B702311AED900604212 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3DF27B712311AEE600604212 /* CountDownLetch.swift */,
+				3DF27B782311B19A00604212 /* BaseMockView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3DF27B752311B11D00604212 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DF27B762311B12800604212 /* MockRateView.swift */,
+				3DFB0FA42311DAD6002788A6 /* MockLandingPageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DF27B7E2311B9C200604212 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				3DF27B7F2311B9D200604212 /* RateViewTest.swift */,
+				3DFB0FA22311DA98002788A6 /* LandingPageViewTest.swift */,
+				3DFB0FA62311DDD2002788A6 /* RateRepositoryTest.swift */,
+				3DFB0FA82311E210002788A6 /* RateManagerTest.swift */,
+				3DFB0FAE2311EA50002788A6 /* CurrencyToFlagUrlManagerTest.swift */,
+				3DFB0FB02311ED6C002788A6 /* CountryCurrenciesRepositoryTest.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		3DFD8CD223043BA9003BEFA7 = {
 			isa = PBXGroup;
 			children = (
 				3DFD8CDD23043BAA003BEFA7 /* Currency */,
 				3DFD8CF223043BAC003BEFA7 /* CurrencyTests */,
-				3DFD8CFD23043BAC003BEFA7 /* CurrencyUITests */,
 				3DFD8CDC23043BAA003BEFA7 /* Products */,
 				B12EC32E34A61D6E192FC119 /* Pods */,
 				C868CABBFB5380A273C6788D /* Frameworks */,
@@ -357,19 +441,13 @@
 		3DFD8CF223043BAC003BEFA7 /* CurrencyTests */ = {
 			isa = PBXGroup;
 			children = (
-				3DFD8CF323043BAC003BEFA7 /* CurrencyTests.swift */,
+				3DF27B7E2311B9C200604212 /* Test */,
+				3DF27B702311AED900604212 /* Common */,
+				3DF27B6D2311AE0100604212 /* Mock */,
+				3DF27B6A2311AD2200604212 /* DI */,
 				3DFD8CF523043BAC003BEFA7 /* Info.plist */,
 			);
 			path = CurrencyTests;
-			sourceTree = "<group>";
-		};
-		3DFD8CFD23043BAC003BEFA7 /* CurrencyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3DFD8CFE23043BAC003BEFA7 /* CurrencyUITests.swift */,
-				3DFD8D0023043BAC003BEFA7 /* Info.plist */,
-			);
-			path = CurrencyUITests;
 			sourceTree = "<group>";
 		};
 		3DFF870D23112F0900910755 /* DataSource */ = {
@@ -695,7 +773,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DFD8CF423043BAC003BEFA7 /* CurrencyTests.swift in Sources */,
+				3DFB0FAB2311E440002788A6 /* MockRateChangeCallback.swift in Sources */,
+				3DF27B802311B9D200604212 /* RateViewTest.swift in Sources */,
+				3DF27B7D2311B37200604212 /* UITestDependency.swift in Sources */,
+				3DF27B772311B12800604212 /* MockRateView.swift in Sources */,
+				3DFB0FAD2311E4B5002788A6 /* MockRatesChangeCallback.swift in Sources */,
+				3DFB0FA52311DAD6002788A6 /* MockLandingPageView.swift in Sources */,
+				3DF27B722311AEE600604212 /* CountDownLetch.swift in Sources */,
+				3DFB0FB12311ED6C002788A6 /* CountryCurrenciesRepositoryTest.swift in Sources */,
+				3DF27B742311AF8A00604212 /* MockEndpoint.swift in Sources */,
+				3DF27B7B2311B2EA00604212 /* MockApp.swift in Sources */,
+				3DF27B6C2311AD4900604212 /* UnitTestDependency.swift in Sources */,
+				3DFB0FA32311DA98002788A6 /* LandingPageViewTest.swift in Sources */,
+				3DF27B6F2311AE1300604212 /* MockConcurrency.swift in Sources */,
+				3DFB0FAF2311EA50002788A6 /* CurrencyToFlagUrlManagerTest.swift in Sources */,
+				3DFB0FA72311DDD2002788A6 /* RateRepositoryTest.swift in Sources */,
+				3DFB0FA92311E210002788A6 /* RateManagerTest.swift in Sources */,
+				3DF27B792311B19A00604212 /* BaseMockView.swift in Sources */,
+				3DFB0FA12311DA0D002788A6 /* MockScheduler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,7 +798,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DFD8CFF23043BAC003BEFA7 /* CurrencyUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

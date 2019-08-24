@@ -41,6 +41,6 @@ public class CurrencyToCountryManagerImp: CurrencyToCountryManager {
 	}
 	
 	public func clearAll() {
-		cache.removeAll(keepingCapacity: true)
+		cache = [:]
 	}
 }

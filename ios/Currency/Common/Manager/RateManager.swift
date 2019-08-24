@@ -25,4 +25,6 @@ public protocol RateManager {
 	
 	func addRatesChangeDelegate(_ delegate: RatesChangeDelegate)
 	func removeRatesChangeDelegate(_ delegate: RatesChangeDelegate)
+	
+	func clearAll()
 }
