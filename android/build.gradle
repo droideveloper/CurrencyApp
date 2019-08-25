@@ -3,7 +3,7 @@ buildscript {
     MVI_VERSION = "2.0.1"
     ANDROID_X_VERSION = "1.0.0"
     ANDROID_X_SUPPORT_VERSION = "1.0.2"
-    KOTLIN_VERSION = "1.3.41"
+    KOTLIN_VERSION = "1.3.50"
     DAGGER_VERSION = "2.17"
     CONSTRAINT_VERSION = "1.1.3"
     GLIDE_VERSION = "4.9.0"
@@ -16,7 +16,7 @@ buildscript {
     jcenter()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:3.4.2'
+    classpath 'com.android.tools.build:gradle:3.5.0'
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$KOTLIN_VERSION"
     // NOTE: Do not place your application dependencies here; they belong
     // in the individual module build.gradle files
